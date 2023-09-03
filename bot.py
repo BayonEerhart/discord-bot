@@ -1,5 +1,6 @@
 import discord
 import responses
+from discord.ext import commands
 
 
 
@@ -19,6 +20,7 @@ def run_discord_bot():
 
     @client.event
     async def on_ready():
+        await client.change_presence(status=discord.Status.online, activity=discord.Game('being a bot')) 
         print(f'{client.user} is now running')
 
     @client.event 
