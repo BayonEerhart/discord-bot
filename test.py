@@ -1,26 +1,34 @@
-import time
-from discord_rpc import Client, Presence
+from wonderwords import RandomWord
+import re
 
-def update_presence():
-    client_id = 'your_client_id'  # Replace this with your actual client ID
-    rpc = Client(client_id)
 
-    rpc.connect()
+input_str = "!word 12"
+
+
+# if match:
+#     number_str = match.group(1)
     
-    presence = Presence(client_id)
-    presence.state = "Playing Solo"
-    presence.details = "Competitive"
-    presence.start = 1507665886
-    presence.end = 1507665886
-    presence.large_image_text = "Numbani"
-    presence.small_image_text = "Rogue - Level 100"
-    presence.party_id = "ae488379-351d-4a4f-ad32-2b9b01c91657"
-    presence.party_size = 1
-    presence.party_max = 5
-    presence.join_secret = "MTI4NzM0OjFpMmhuZToxMjMxMjM="
+#     number = int(number_str)
     
-    rpc.update(presence)
+#     for i in range(number):
+#         print(f"Iteration {i+1} of the loop.")
+# else:
+#     print("Input does not match the expected pattern.")
 
-    rpc.close()
 
-update_presence()
+def handle_response(message) -> str:
+    p_message = message.lower()
+    pattern = r"!word (\d+)"
+    match = re.match(pattern, p_message)
+    if match:
+        number_str = match.group(1)
+        number = int(number_str)
+        r = RandomWord()
+        sent = ""
+        if number > 100:
+            return "the number is way to big do something less than 100"
+        print(number)
+        for i in range(number):
+            sent = sent +  " " + r.word()
+        return sent
+print(handle_response(input_str))

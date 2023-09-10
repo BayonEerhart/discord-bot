@@ -2,6 +2,8 @@ import random
 import datetime
 # import logs
 import pyjokes  
+from wonderwords import RandomWord
+
 
 
 def handle_response(message) -> str:
@@ -17,4 +19,11 @@ def handle_response(message) -> str:
         
     if p_message == "!joke":
         return pyjokes.get_joke()
+
+    if p_message == "!word"[:5]:
+        if p_message[6:]:
+            return p_message[6:]
+        r = RandomWord()
+        return r.word()
+
         
