@@ -2,7 +2,11 @@ import random
 import datetime
 # import logs
 import pyjokes  
+import re
 from wonderwords import RandomWord
+import random
+import os
+import sys
 
 
 
@@ -20,10 +24,22 @@ def handle_response(message) -> str:
     if p_message == "!joke":
         return pyjokes.get_joke()
 
-    if p_message == "!word"[:5]:
-        if p_message[6:]:
-            return p_message[6:]
+    if re.match(r"!word (\d+)", p_message):
+        number_str = re.match(r"!word (\d+)", p_message).group(1)
+        number = int(number_str)
+        r = RandomWord()
+        sent = ""
+        print(number)
+        if number > 1000:
+            return "the number is way to big do something less than 100"
+        for i in range(number):
+            sent = sent +  " " + r.word()
+        return sent[:1999]
+
+    if p_message == "!word":
         r = RandomWord()
         return r.word()
-
+    if p_message == "!restart":
+            os.execl(sys.executable, sys.executable, *sys.argv)
         
+
