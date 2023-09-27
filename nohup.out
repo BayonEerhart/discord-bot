@@ -153,3 +153,30 @@ UnboundLocalError: local variable 'save' referenced before assignment
 [2023-09-18 03:06:05] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 80c625b531fecc335b70bc7d469253dc.
 [2023-09-18 05:04:03] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 80c625b531fecc335b70bc7d469253dc.
 [2023-09-18 06:00:41] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 80c625b531fecc335b70bc7d469253dc.
+[2023-09-27 15:00:19] [INFO    ] discord.client: logging in using static token
+[2023-09-27 15:00:20] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 702c4ecd3b65c5ce36be27e8f5da8618).
+[2023-09-27 15:15:50] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 702c4ecd3b65c5ce36be27e8f5da8618.
+[2023-09-27 16:17:35] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 702c4ecd3b65c5ce36be27e8f5da8618.
+[2023-09-27 16:38:14] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 702c4ecd3b65c5ce36be27e8f5da8618.
+[2023-09-27 17:52:00] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 702c4ecd3b65c5ce36be27e8f5da8618.
+[2023-09-27 18:59:59] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 702c4ecd3b65c5ce36be27e8f5da8618.
+[2023-09-27 21:44:27] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 702c4ecd3b65c5ce36be27e8f5da8618.
+[2023-09-27 23:16:57] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 702c4ecd3b65c5ce36be27e8f5da8618.
+Traceback (most recent call last):
+  File "/home/pi/project/discord-bot/main.py", line 1, in <module>
+    import bot
+  File "/home/pi/project/discord-bot/bot.py", line 2, in <module>
+    import responses
+  File "/home/pi/project/discord-bot/responses.py", line 110
+    !zone               : outputs all suported time zones
+                                                         ^
+SyntaxError: EOL while scanning string literal
+Traceback (most recent call last):
+  File "/home/pi/project/discord-bot/main.py", line 1, in <module>
+    import bot
+  File "/home/pi/project/discord-bot/bot.py", line 2, in <module>
+    import responses
+  File "/home/pi/project/discord-bot/responses.py", line 110
+    !zone               : outputs all suported time zones
+                                                         ^
+SyntaxError: EOL while scanning string literal
