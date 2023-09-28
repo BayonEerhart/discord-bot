@@ -180,3 +180,154 @@ Traceback (most recent call last):
     !zone               : outputs all suported time zones
                                                          ^
 SyntaxError: EOL while scanning string literal
+[2023-09-28 01:18:23] [INFO    ] discord.client: logging in using static token
+[2023-09-28 01:18:24] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 54cb4e378db26de293b8ee78979852bc).
+[2023-09-28 01:21:05] [ERROR   ] discord.client: Attempting a reconnect in 0.89s
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.9/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pi/.local/lib/python3.9/site-packages/discord/http.py", line 537, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pi/.local/lib/python3.9/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pi/.local/lib/python3.9/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pi/.local/lib/python3.9/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pi/.local/lib/python3.9/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pi/.local/lib/python3.9/site-packages/aiohttp/connector.py", line 1178, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+  File "/home/pi/.local/lib/python3.9/site-packages/aiohttp/connector.py", line 980, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)  # type: ignore[return-value]  # noqa
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 1041, in create_connection
+    sock = await self._connect_sock(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 955, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/usr/lib/python3.9/asyncio/selector_events.py", line 502, in sock_connect
+    return await fut
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.9/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.9/asyncio/tasks.py", line 494, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+[2023-09-28 01:22:06] [ERROR   ] discord.client: Attempting a reconnect in 3.69s
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.9/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pi/.local/lib/python3.9/site-packages/discord/http.py", line 537, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pi/.local/lib/python3.9/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pi/.local/lib/python3.9/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pi/.local/lib/python3.9/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pi/.local/lib/python3.9/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pi/.local/lib/python3.9/site-packages/aiohttp/connector.py", line 1178, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+  File "/home/pi/.local/lib/python3.9/site-packages/aiohttp/connector.py", line 980, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)  # type: ignore[return-value]  # noqa
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 1041, in create_connection
+    sock = await self._connect_sock(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 955, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/usr/lib/python3.9/asyncio/selector_events.py", line 502, in sock_connect
+    return await fut
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.9/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.9/asyncio/tasks.py", line 494, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+[2023-09-28 01:23:09] [ERROR   ] discord.client: Attempting a reconnect in 3.91s
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.9/site-packages/discord/gateway.py", line 372, in from_client
+    socket = await client.http.ws_connect(str(url))
+  File "/home/pi/.local/lib/python3.9/site-packages/discord/http.py", line 537, in ws_connect
+    return await self.__session.ws_connect(url, **kwargs)
+  File "/home/pi/.local/lib/python3.9/site-packages/aiohttp/client.py", line 779, in _ws_connect
+    resp = await self.request(
+  File "/home/pi/.local/lib/python3.9/site-packages/aiohttp/client.py", line 536, in _request
+    conn = await self._connector.connect(
+  File "/home/pi/.local/lib/python3.9/site-packages/aiohttp/connector.py", line 540, in connect
+    proto = await self._create_connection(req, traces, timeout)
+  File "/home/pi/.local/lib/python3.9/site-packages/aiohttp/connector.py", line 901, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+  File "/home/pi/.local/lib/python3.9/site-packages/aiohttp/connector.py", line 1178, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+  File "/home/pi/.local/lib/python3.9/site-packages/aiohttp/connector.py", line 980, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs)  # type: ignore[return-value]  # noqa
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 1041, in create_connection
+    sock = await self._connect_sock(
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 955, in _connect_sock
+    await self.sock_connect(sock, address)
+  File "/usr/lib/python3.9/asyncio/selector_events.py", line 502, in sock_connect
+    return await fut
+asyncio.exceptions.CancelledError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3.9/asyncio/tasks.py", line 492, in wait_for
+    fut.result()
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.9/site-packages/discord/client.py", line 656, in connect
+    self.ws = await asyncio.wait_for(coro, timeout=60.0)
+  File "/usr/lib/python3.9/asyncio/tasks.py", line 494, in wait_for
+    raise exceptions.TimeoutError() from exc
+asyncio.exceptions.TimeoutError
+[2023-09-28 01:23:14] [INFO    ] discord.gateway: Shard ID None session has been invalidated.
+[2023-09-28 01:23:19] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 4ba51dad4b6a6f18342609ea3a3afd2e).
+[2023-09-28 02:19:56] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4ba51dad4b6a6f18342609ea3a3afd2e.
+[2023-09-28 03:11:47] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4ba51dad4b6a6f18342609ea3a3afd2e.
+[2023-09-28 04:00:38] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4ba51dad4b6a6f18342609ea3a3afd2e.
+[2023-09-28 04:15:22] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4ba51dad4b6a6f18342609ea3a3afd2e.
+[2023-09-28 04:59:38] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4ba51dad4b6a6f18342609ea3a3afd2e.
+[2023-09-28 05:15:11] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4ba51dad4b6a6f18342609ea3a3afd2e.
+[2023-09-28 06:06:08] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4ba51dad4b6a6f18342609ea3a3afd2e.
+[2023-09-28 06:13:56] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4ba51dad4b6a6f18342609ea3a3afd2e.
+[2023-09-28 07:57:36] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4ba51dad4b6a6f18342609ea3a3afd2e.
+[2023-09-28 10:26:22] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4ba51dad4b6a6f18342609ea3a3afd2e.
+[2023-09-28 12:05:27] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4ba51dad4b6a6f18342609ea3a3afd2e.
+[2023-09-28 12:57:37] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4ba51dad4b6a6f18342609ea3a3afd2e.
+[2023-09-28 13:07:15] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4ba51dad4b6a6f18342609ea3a3afd2e.
+[2023-09-28 14:07:05] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4ba51dad4b6a6f18342609ea3a3afd2e.
+[2023-09-28 15:19:00] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4ba51dad4b6a6f18342609ea3a3afd2e.
+[2023-09-28 17:31:43] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4ba51dad4b6a6f18342609ea3a3afd2e.
+[2023-09-28 17:41:58] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4ba51dad4b6a6f18342609ea3a3afd2e.
+[2023-09-28 19:10:15] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4ba51dad4b6a6f18342609ea3a3afd2e.
+[2023-09-28 20:43:47] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4ba51dad4b6a6f18342609ea3a3afd2e.
+[2023-09-28 22:24:48] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 4ba51dad4b6a6f18342609ea3a3afd2e.
+[2023-09-28 23:05:45] [INFO    ] discord.client: logging in using static token
+[2023-09-28 23:05:46] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 15dd7c993f0eda9d774846ce13fd0898).
+[2023-09-28 23:06:35] [INFO    ] discord.client: logging in using static token
+[2023-09-28 23:06:38] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 047f23a13dcfcdd4b04042b7b60db6fd).

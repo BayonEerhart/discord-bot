@@ -30,7 +30,7 @@ def run_discord_bot():
         username = str(message.author)
         user_message = str(message.content)
         channel = str(message.channel)
-
+        
         # channel_id = 1147012150250975293  
         # channel = client.get_channel(channel_id)
         # if channel:

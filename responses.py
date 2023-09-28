@@ -44,7 +44,7 @@ def handle_response(message) -> str:
             os.execl(sys.executable, sys.executable, *sys.argv)
         
     if p_message == "!time":
-        return "bayons time is = " + datetime.datetime.now().strftime('%H:%M:%S')
+        return "bayons time is = " + datetime.datetime.now().strftime('%I:%M:%S %p')
 
     if re.match(r"!time(.+)", p_message):
 
@@ -74,7 +74,7 @@ def handle_response(message) -> str:
             with open("times.json", 'r') as file:
                 data = json.load(file)
         
-            data[p_split[1]] = [True, p_split[2]]      # for now its always true intill i think of a beter way
+            data[p_split[1]] = [False, p_split[2]]      # for now its always true intill i think of a beter way
 
             with open("times.json", 'w') as file:
                 json.dump(data, file, indent=4)
