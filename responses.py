@@ -38,7 +38,7 @@ def handle_response(message) -> str:
     if p_message == "!word":
         r = RandomWord()
         return r.word()
-    
+
     if p_message == "!time":
         return "bayons time is = " + datetime.datetime.now().strftime('%I:%M:%S %p')
 
@@ -53,7 +53,7 @@ def handle_response(message) -> str:
             if data[p_split[1]][0] == True:
                 return (datetime.datetime.now(pytz.timezone(data[p_split[1]][1])).strftime('%H:%M:%S'))
         except:
-            return "user does not exist"
+            return "user does not exist" 
 
     if p_message == "!new":
         return "!new <@user> <zone>"
@@ -92,8 +92,10 @@ def handle_response(message) -> str:
     if p_message == "!comands" or p_message == "!help":
         return  "!hello                                      : says hello back\n!joke                                       : says a bad programming joke\n!word                                     : gives a random word\n!word <number>                : gives a random word times <number>\n!restart                                 : restarts the .py\n!time                                      : sends bayon009ke's time\n!time <@user>                    : sends the time of an added user\n!new                                       : says -> !new<@user> <zone>\n!new <@user> <zone>      : adds a user name + the time zone so it allows you to use !time <@user>\n!zone                                     : outputs all supported time zones\n"
 
+    # if p_message == "!kill":
+    #     return "i am un  faced bitch"
+    #     exist()
 
-    
-    if p_message == "!restart":
-            os.execl(sys.executable, sys.executable, *sys.argv)
-        
+    # if p_message == "!restart":
+    #     os.execl(sys.executable, sys.executable, *sys.argv)
+       
