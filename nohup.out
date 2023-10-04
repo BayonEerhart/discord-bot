@@ -331,3 +331,153 @@ asyncio.exceptions.TimeoutError
 [2023-09-28 23:05:46] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 15dd7c993f0eda9d774846ce13fd0898).
 [2023-09-28 23:06:35] [INFO    ] discord.client: logging in using static token
 [2023-09-28 23:06:38] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 047f23a13dcfcdd4b04042b7b60db6fd).
+[2023-09-28 23:43:17] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 047f23a13dcfcdd4b04042b7b60db6fd.
+[2023-09-28 23:47:43] [INFO    ] discord.client: logging in using static token
+[2023-09-28 23:47:44] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: eabf9979a43767d4fa9cb8140d8f8c27).
+[2023-09-28 23:49:54] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session eabf9979a43767d4fa9cb8140d8f8c27.
+[2023-09-29 00:03:11] [INFO    ] discord.client: logging in using static token
+[2023-09-29 00:03:12] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: bb03bfc1788e419176d7778a2de0be82).
+[2023-09-29 00:03:53] [INFO    ] discord.client: logging in using static token
+[2023-09-29 00:03:54] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: a818b75e33c1be19e38a93278bd89e8c).
+[2023-09-29 00:04:57] [INFO    ] discord.client: logging in using static token
+[2023-09-29 00:04:58] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 09b85d8146be74b9c9b0a3173c93f6c1).
+[2023-09-29 00:05:28] [INFO    ] discord.client: logging in using static token
+[2023-09-29 00:05:29] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 60c66d5a2a7bbe53ca404c8a3c4a0ca7).
+[2023-09-29 00:06:39] [INFO    ] discord.client: logging in using static token
+[2023-09-29 00:06:40] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 0898bbad924556d24330eb1a191ad7ff).
+[2023-09-29 00:07:26] [INFO    ] discord.client: logging in using static token
+[2023-09-29 00:07:27] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: f0156adcb8dea1fa534b019087988282).
+[2023-09-29 00:08:45] [INFO    ] discord.client: logging in using static token
+[2023-09-29 00:08:46] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: bd3d2b9549f33f9e520438352676ff4b).
+[2023-09-29 00:09:27] [INFO    ] discord.client: logging in using static token
+[2023-09-29 00:09:27] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 7e0544faea97cefcab8ab770924c7939).
+[2023-09-29 00:11:01] [INFO    ] discord.client: logging in using static token
+[2023-09-29 00:11:02] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: f9ddf5f146e3e23a30c39a28e6b1d5a7).
+[2023-09-29 00:12:35] [INFO    ] discord.client: logging in using static token
+[2023-09-29 00:12:35] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: b297dd28251f67455005479dd2381ea8).
+[2023-09-29 00:13:58] [INFO    ] discord.client: logging in using static token
+[2023-09-29 00:13:59] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: ae05514c47057acea837dfda89418fc6).
+[2023-09-29 00:14:19] [INFO    ] discord.client: logging in using static token
+[2023-09-29 00:14:19] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 3975c7a6db946dc484f018bc565f157f).
+Traceback (most recent call last):
+  File "/home/pi/project/discord-bot/main.py", line 1, in <module>
+    import bot
+  File "/home/pi/project/discord-bot/bot.py", line 2, in <module>
+    import responses
+  File "/home/pi/project/discord-bot/responses.py", line 100
+    exist(*)
+           ^
+SyntaxError: invalid syntax
+[2023-09-29 00:20:15] [INFO    ] discord.client: logging in using static token
+[2023-09-29 00:20:16] [INFO    ] discord.gateway: Shard ID None has connected to Gateway (Session ID: 625b515e7682ff3f90434ad3e040ec3c).
+[2023-09-29 02:56:45] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-09-29 05:59:13] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-09-29 06:16:49] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-09-29 08:36:09] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-09-29 09:19:54] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-09-29 12:12:35] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-09-29 13:41:39] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-09-29 15:07:13] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-09-29 16:41:28] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-09-29 17:19:14] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-09-29 19:59:05] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-09-29 20:36:51] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-09-29 20:59:33] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-09-29 23:08:49] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-09-29 23:32:05] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-09-30 02:38:56] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-09-30 04:47:47] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-09-30 06:32:04] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-09-30 08:05:41] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-09-30 09:12:22] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-09-30 11:37:58] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-09-30 15:21:20] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-09-30 15:52:30] [ERROR   ] discord.client: Attempting a reconnect in 1.13s
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.9/site-packages/discord/client.py", line 659, in connect
+    await self.ws.poll_event()
+  File "/home/pi/.local/lib/python3.9/site-packages/discord/gateway.py", line 646, in poll_event
+    raise ConnectionClosed(self.socket, shard_id=self.shard_id, code=code) from None
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 1000
+[2023-09-30 15:52:31] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-09-30 17:19:03] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-09-30 18:53:19] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-09-30 19:51:51] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-09-30 21:23:32] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-09-30 21:40:56] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-01 00:52:30] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-01 02:34:18] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-01 06:19:50] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-01 08:56:49] [ERROR   ] discord.client: Attempting a reconnect in 0.53s
+Traceback (most recent call last):
+  File "/home/pi/.local/lib/python3.9/site-packages/discord/client.py", line 659, in connect
+    await self.ws.poll_event()
+  File "/home/pi/.local/lib/python3.9/site-packages/discord/gateway.py", line 646, in poll_event
+    raise ConnectionClosed(self.socket, shard_id=self.shard_id, code=code) from None
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 1000
+[2023-10-01 08:57:21] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-01 09:52:15] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-01 13:23:22] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-01 14:58:14] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-01 16:26:27] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-01 20:12:43] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-01 22:49:28] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-02 01:31:28] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-02 04:39:57] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-02 07:12:22] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-02 08:27:30] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-02 10:12:25] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-02 11:55:29] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-02 12:41:45] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-02 15:12:12] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-02 15:41:38] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-02 16:53:55] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-02 18:01:58] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-02 20:48:01] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-02 22:23:44] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-02 23:32:01] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-03 01:58:39] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-03 02:20:27] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-03 03:05:28] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-03 05:01:11] [WARNING ] discord.gateway: Can't keep up, shard ID None websocket is 13.5s behind.
+[2023-10-03 05:19:52] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-03 06:38:30] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-03 09:16:21] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-03 10:43:36] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-03 12:11:25] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-03 12:52:29] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-03 14:10:50] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-03 14:28:10] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-03 17:41:31] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-03 20:47:24] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-03 21:05:18] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-03 22:50:02] [WARNING ] discord.gateway: Can't keep up, shard ID None websocket is 13.8s behind.
+[2023-10-03 23:03:39] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-04 01:47:25] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-04 04:52:59] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-04 06:09:12] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-04 07:06:48] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-04 08:19:13] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-04 09:04:52] [INFO    ] discord.gateway: Shard ID None has successfully RESUMED session 625b515e7682ff3f90434ad3e040ec3c.
+[2023-10-04 09:14:55] [INFO    ] discord.gateway: Shard ID None session has been invalidated.
+zero two bot for mc#2989 is now running
+Traceback (most recent call last):
+  File "/home/pi/project/discord-bot/main.py", line 4, in <module>
+    bot.run_discord_bot()
+  File "/home/pi/project/discord-bot/bot.py", line 43, in run_discord_bot
+    client.run(TOKEN)
+  File "/home/pi/.local/lib/python3.9/site-packages/discord/client.py", line 860, in run
+    asyncio.run(runner())
+  File "/usr/lib/python3.9/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+  File "/home/pi/.local/lib/python3.9/site-packages/discord/client.py", line 849, in runner
+    await self.start(token, reconnect=reconnect)
+  File "/home/pi/.local/lib/python3.9/site-packages/discord/client.py", line 778, in start
+    await self.connect(reconnect=reconnect)
+  File "/home/pi/.local/lib/python3.9/site-packages/discord/client.py", line 659, in connect
+    await self.ws.poll_event()
+  File "/home/pi/.local/lib/python3.9/site-packages/discord/gateway.py", line 646, in poll_event
+    raise ConnectionClosed(self.socket, shard_id=self.shard_id, code=code) from None
+discord.errors.ConnectionClosed: Shard ID None WebSocket closed with 4004
