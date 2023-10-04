@@ -109,11 +109,11 @@ def handle_response(message, user_id) -> str:
     !zone                                     : outputs all supported time zones\n")
 
     if p_message == "!restart" or p_message == "!kill":
+        with open("settings.json", "r") as read_file:
+            data = json.load(read_file)
+        if user_id in data["mods"]:
+            if p_message == "!kill":
+                exit(code="bye")
+            if p_message == "!restart":
+                os.execl(sys.executable, sys.executable, *sys.argv)
         return "try having mod"
-
-    if user_id == "571013025801437194":
-        if p_message == "!kill":
-            exit(code="bye")
-
-        if p_message == "!restart":
-            os.execl(sys.executable, sys.executable, *sys.argv)
