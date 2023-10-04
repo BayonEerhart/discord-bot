@@ -1,6 +1,6 @@
 import random
 import datetime
-import pyjokes  
+import pyjokes
 import re
 from wonderwords import RandomWord
 import random
@@ -10,8 +10,7 @@ import json
 import pytz
 
 
-
-def handle_response(message) -> str:
+def handle_response(message, user_id) -> str:
     p_message = message.lower()
 
     if p_message == '!hello':
@@ -19,7 +18,7 @@ def handle_response(message) -> str:
 
     # if p_message == "!logs":
     #     logs.minecraft_log()
-        
+
     if p_message == "!joke":
         return pyjokes.get_joke()
 
@@ -32,7 +31,7 @@ def handle_response(message) -> str:
         if number > 100:
             return "the number is way to big do something less than 100"
         for i in range(number):
-            sent = sent +  " " + r.word()
+            sent = sent + " " + r.word()
         return sent[:1999]
 
     if p_message == "!word":
@@ -48,38 +47,46 @@ def handle_response(message) -> str:
             data = json.load(read_file)
         p_split = p_message.split()
         try:
-            if data[p_split[1]][0] == False:
-                return (datetime.datetime.now(pytz.timezone(data[p_split[1]][1])).strftime("%I:%M:%S %p"))
-            if data[p_split[1]][0] == True:
-                return (datetime.datetime.now(pytz.timezone(data[p_split[1]][1])).strftime('%H:%M:%S'))
+            if data[p_split[1]][0]:
+                return datetime.datetime.now(pytz.timezone(data[p_split[1]][1])).strftime("%I:%M:%S %p")
+            if data[p_split[1]][0]:
+                return datetime.datetime.now(pytz.timezone(data[p_split[1]][1])).strftime('%H:%M:%S')
         except:
-            return "user does not exist" 
+            return "user does not exist"
 
     if p_message == "!new":
         return "!new <@user> <zone>"
-    
+
     if re.match(r"!new(.+)", p_message):
-        zones = ['gmt', 'cet', 'eet', 'europe/moscow', 'asia/dubai', 'asia/riyadh', 'asia/kolkata', 'asia/dhaka', 'asia/bangkok', 'asia/shanghai', 'asia/tokyo', 'australia/sydney', 'pacific/auckland', 'pacific/honolulu', 'america/anchorage', 'america/los_angeles', 'america/denver', 'america/chicago', 'america/new_york', 'america/argentina/buenos_aires', 'america/sao_paulo', 'europe/lisbon', 'atlantic/azores', 'etc/gmt+12']
+        zones = ['gmt', 'cet', 'eet', 'europe/moscow', 'asia/dubai', 'asia/riyadh', 'asia/kolkata', 'asia/dhaka',
+                 'asia/bangkok', 'asia/shanghai', 'asia/tokyo', 'australia/sydney', 'pacific/auckland',
+                 'pacific/honolulu', 'america/anchorage', 'america/los_angeles', 'america/denver', 'america/chicago',
+                 'america/new_york', 'america/argentina/buenos_aires', 'america/sao_paulo', 'europe/lisbon',
+                 'atlantic/azores', 'etc/gmt+12']
         p_split = p_message.split()
         print(p_message)
-        if (p_split[1][1])!= "@":
+        if (p_split[1][1]) != "@":
             return "just @ some one he wont bite"
         if len(p_split) == 2:
             return "you have to add a time zone;\ndont know your time zone? do !zone"
-        if  p_split[2] in (zones):
+        if p_split[2] in (zones):
             with open("times.json", 'r') as file:
                 data = json.load(file)
-        
-            data[p_split[1]] = [False, p_split[2]]      # for now its always true intill i think of a beter way
+
+            data[p_split[1]] = [False, p_split[2]]  # for now it's always true in till I think of a beter way
 
             with open("times.json", 'w') as file:
                 json.dump(data, file, indent=4)
-            return(f"{p_split[1]} has been added!\nhis time now is: " + handle_response(("!time " + p_split[1])))     
+            return f"{p_split[1]} has been added!\nhis time now is: " + handle_response(("!time " + p_split[1]))
         else:
             return "you have to add a time zone;\ndont know your time zone? do !zone"
-        
+
     if p_message == "!zone":
-        zones = ['gmt', 'cet', 'eet', 'europe/moscow', 'asia/dubai', 'asia/riyadh', 'asia/kolkata', 'asia/dhaka', 'asia/bangkok', 'asia/shanghai', 'asia/tokyo', 'australia/sydney', 'pacific/auckland', 'pacific/honolulu', 'america/anchorage', 'america/los_angeles', 'america/denver', 'america/chicago', 'america/new_york', 'america/argentina/buenos_aires', 'america/sao_paulo', 'europe/lisbon', 'atlantic/azores', 'etc/gmt+12']
+        zones = ['gmt', 'cet', 'eet', 'europe/moscow', 'asia/dubai', 'asia/riyadh', 'asia/kolkata', 'asia/dhaka',
+                 'asia/bangkok', 'asia/shanghai', 'asia/tokyo', 'australia/sydney', 'pacific/auckland',
+                 'pacific/honolulu', 'america/anchorage', 'america/los_angeles', 'america/denver', 'america/chicago',
+                 'america/new_york', 'america/argentina/buenos_aires', 'america/sao_paulo', 'europe/lisbon',
+                 'atlantic/azores', 'etc/gmt+12']
         max_len = max(len(zone) for zone in zones)
         back = ""
         for zone in zones:
@@ -89,13 +96,24 @@ def handle_response(message) -> str:
         back += "\n if i forget your time zone let me know"
         return back
 
-    if p_message == "!comands" or p_message == "!help":
-        return  "!hello                                      : says hello back\n!joke                                       : says a bad programming joke\n!word                                     : gives a random word\n!word <number>                : gives a random word times <number>\n!restart                                 : restarts the .py\n!time                                      : sends bayon009ke's time\n!time <@user>                    : sends the time of an added user\n!new                                       : says -> !new<@user> <zone>\n!new <@user> <zone>      : adds a user name + the time zone so it allows you to use !time <@user>\n!zone                                     : outputs all supported time zones\n"
+    if p_message == "!commands" or p_message == "!help":
+        return ("!hello                                      : says hello back\n\
+    !joke                                       : says a bad programming joke\n\
+    !word                                     : gives a random word\n\
+    !word <number>                : gives a random word times <number>\n\
+    !restart                                 : restarts the .py\n\
+    !time                                      : sends bayon009ke's time\n\
+    !time <@user>                    : sends the time of an added user\n\
+    !new                                       : says -> !new<@user> <zone>\n\
+    !new <@user> <zone>      : adds a user name + the time zone so it allows you to use !time <@user>\n\
+    !zone                                     : outputs all supported time zones\n")
 
-    # if p_message == "!kill":
-    #     return "i am un  faced bitch"
-    #     exist()
+    if p_message == "!restart" or p_message == "!kill":
+        return "try having mod"
 
-    # if p_message == "!restart":
-    #     os.execl(sys.executable, sys.executable, *sys.argv)
-       
+    if user_id == "571013025801437194":
+        if p_message == "!kill":
+            exit(code="bye")
+
+        if p_message == "!restart":
+            os.execl(sys.executable, sys.executable, *sys.argv)
