@@ -1,6 +1,7 @@
 import discord
 import responses
 from discord.ext import commands
+import json
 
 
 
@@ -12,7 +13,12 @@ async def send_message(message, user_message, is_private):
         print(e)
 
 def run_discord_bot():
-    TOKEN = "MTE0NjkzMjIwNjU3MzQ2OTgwNg.GDY2vY.bqSXmP-uQn0JKyC8GSdV3dzBUDI34MQ2yXntaw"
+    with open("settings.json", 'r') as file:
+        data = json.load(file)
+    TOKEN = data["token"]
+    if (TOKEN == "token"):
+        exit("u need to add a token")
+    
     intents = discord.Intents.default() 
     intents.message_content = True 
     client = discord.Client(intents=intents)
