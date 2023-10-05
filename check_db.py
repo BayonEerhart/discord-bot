@@ -10,6 +10,6 @@ mycursor = mydb.cursor()
 # mycursor.execute("USE chatapp")
 # mycursor.execute("SELECT 1 FROM 1 FROM `users`;")
 
-mycursor.execute(" SELECT id FROM users WHERE id;")
+mycursor.execute("SELECT id FROM users WHERE id;")
 for x in mycursor:
   print(x)

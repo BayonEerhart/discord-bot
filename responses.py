@@ -8,6 +8,8 @@ import os
 import sys
 import json
 import pytz
+import randfacts
+
 
 
 def handle_response(message, user_id) -> str:
@@ -15,9 +17,6 @@ def handle_response(message, user_id) -> str:
 
     if p_message == '!hello':
         return 'hey there'
-
-    # if p_message == "!logs":
-    #     logs.minecraft_log()
 
     if p_message == "!joke":
         return pyjokes.get_joke()
@@ -47,13 +46,12 @@ def handle_response(message, user_id) -> str:
             data = json.load(read_file)
         p_split = p_message.split()
         try:
-            if data[p_split[1]][0]:
-                return datetime.datetime.now(pytz.timezone(data[p_split[1]][1])).strftime("%I:%M:%S %p")
-            if data[p_split[1]][0]:
-                return datetime.datetime.now(pytz.timezone(data[p_split[1]][1])).strftime('%H:%M:%S')
+            if data[p_split[1]][0] == False:
+                return (datetime.datetime.now(pytz.timezone(data[p_split[1]][1])).strftime("%I:%M:%S %p"))
+            if data[p_split[1]][0] == True:
+                return (datetime.datetime.now(pytz.timezone(data[p_split[1]][1])).strftime('%H:%M:%S'))
         except:
             return "user does not exist"
-
     if p_message == "!new":
         return "!new <@user> <zone>"
 
@@ -73,7 +71,7 @@ def handle_response(message, user_id) -> str:
             with open("times.json", 'r') as file:
                 data = json.load(file)
 
-            data[p_split[1]] = [False, p_split[2]]  # for now it's always true in till I think of a beter way
+            data[p_split[1]] = [False, p_split[2]]  # for now, it's always true in till I think of a beter way
 
             with open("times.json", 'w') as file:
                 json.dump(data, file, indent=4)
@@ -96,19 +94,23 @@ def handle_response(message, user_id) -> str:
         back += "\n if i forget your time zone let me know"
         return back
 
+    if p_message == "!fact":
+        return "did you know?: " + randfacts.get_fact()
+
+
     if p_message == "!commands" or p_message == "!help":
         return ("!hello                                      : says hello back\n\
-    !joke                                       : says a bad programming joke\n\
-    !word                                     : gives a random word\n\
-    !word <number>                : gives a random word times <number>\n\
-    !restart                                 : restarts the .py\n\
-    !time                                      : sends bayon009ke's time\n\
-    !time <@user>                    : sends the time of an added user\n\
-    !new                                       : says -> !new<@user> <zone>\n\
-    !new <@user> <zone>      : adds a user name + the time zone so it allows you to use !time <@user>\n\
-    !zone                                     : outputs all supported time zones\n")
+!joke                                       : says a bad programming joke\n\
+!word                                     : gives a random word\n\
+!word <number>                : gives a random word times <number>\n\
+!restart                                 : restarts the .py\n\
+!time                                      : sends bayon009ke's time\n\
+!time <@user>                    : sends the time of an added user\n\
+!new                                       : says -> !new<@user> <zone>\n\
+!new <@user> <zone>      : adds a user name + the time zone so it allows you to use !time <@user>\n\
+!zone                                     : outputs all supported time zones\n")
 
-    if p_message == "!restart" or p_message == "!kill":
+    if p_message == "!restart" or p_message == "!kill" or p_message.split()[0] == "!new_mod":
         with open("settings.json", "r") as read_file:
             data = json.load(read_file)
         if user_id in data["mods"]:
@@ -116,4 +118,5 @@ def handle_response(message, user_id) -> str:
                 exit(code="bye")
             if p_message == "!restart":
                 os.execl(sys.executable, sys.executable, *sys.argv)
+
         return "try having mod"

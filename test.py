@@ -1,14 +1,19 @@
-import json
+import quotes_generator
 
-with open("settings.json", "r") as read_file:
-    data = json.load(read_file)
 
-if user_id in data["mods"]:
-    print("test done")
- 
- 
- 
- 
- 
- 
- 
+
+
+def test(p_message):
+    if p_message == "!quete":
+        quote = quotes_generator.motivational_quotes()
+        print(quote)
+
+
+
+    return 0
+
+
+
+user_input = "!quete"
+
+print(test(user_input))
