@@ -26,7 +26,6 @@ def handle_response(message, user_id) -> str:
         number = int(number_str)
         r = RandomWord()
         sent = ""
-        print(number)
         if number > 100:
             return "the number is way to big do something less than 100"
         for i in range(number):
