@@ -4,9 +4,9 @@ from discord.ext import commands
 import json
 
 
-async def send_message(message, user_message, user_id, is_private):
+async def send_message(message, user_message, user_id, client,  is_private):
     try:
-        response = responses.handle_response(user_message, user_id)
+        response = responses.handle_response(user_message, user_id, client)
         await message.author.send(response) if is_private else await message.channel.send(response)
     except Exception as e:
         print(e)
@@ -25,7 +25,7 @@ def run_discord_bot():
     @client.event
     async def on_ready():
         await client.change_presence(status=discord.Status.online, activity=discord.Game('being a bot'))
-        print(f'{client.user} is now running')
+        print(f'{client.user} ready')
 
     @client.event
     async def on_message(message):
@@ -33,14 +33,8 @@ def run_discord_bot():
             return
         username = str(message.author.id)
         user_message = str(message.content)
-        channel = str(message.channel)
-
-        # channel_id = 1147012150250975293  
-        # channel = client.get_channel(channel_id)
-        # if channel:
-        #     await channel.send(f"user: {username} \nmassage: {user_message} \nchanel: {channel}")
 
         if user_message[0] == "!":
-            await send_message(message, user_message, username, is_private=False)
+            await send_message(message, user_message, username, client, is_private=False)
 
     client.run(TOKEN)

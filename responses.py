@@ -11,7 +11,6 @@ import pytz
 import randfacts
 
 
-
 def handle_response(message, user_id) -> str:
     p_message = message.lower()
 
@@ -27,7 +26,7 @@ def handle_response(message, user_id) -> str:
         r = RandomWord()
         sent = ""
         if number > 100:
-            return "the number is way to big do something less than 100"
+            return "the number is way to big, do something less than 100"
         for i in range(number):
             sent = sent + " " + r.word()
         return sent[:1999]
@@ -40,7 +39,6 @@ def handle_response(message, user_id) -> str:
         return "bayons time is = " + datetime.datetime.now().strftime('%I:%M:%S %p')
 
     if re.match(r"!time(.+)", p_message):
-
         with open("times.json", "r") as read_file:
             data = json.load(read_file)
         p_split = p_message.split()
@@ -70,7 +68,7 @@ def handle_response(message, user_id) -> str:
             with open("times.json", 'r') as file:
                 data = json.load(file)
 
-            data[p_split[1]] = [False, p_split[2]]  # for now, it's always true in till I think of a beter way
+            data[p_split[1]] = [False, p_split[2]]  # for now, it's always true in till I think of a beter way. this says if it sould display the time in base 24 or base 12
 
             with open("times.json", 'w') as file:
                 json.dump(data, file, indent=4)
@@ -107,7 +105,8 @@ def handle_response(message, user_id) -> str:
 !time <@user>                    : sends the time of an added user\n\
 !new                                       : says -> !new<@user> <zone>\n\
 !new <@user> <zone>      : adds a user name + the time zone so it allows you to use !time <@user>\n\
-!zone                                     : outputs all supported time zones\n")
+!zone                                     : outputs all supported time zones\n\
+!fact                                     : outputs a random fun fact :)")
 
     if p_message == "!restart" or p_message == "!kill" or p_message.split()[0] == "!new_mod":
         with open("settings.json", "r") as read_file:
@@ -119,3 +118,4 @@ def handle_response(message, user_id) -> str:
                 os.execl(sys.executable, sys.executable, *sys.argv)
 
         return "try having mod"
+
