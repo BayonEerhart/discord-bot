@@ -45,4 +45,4 @@ if you have a great idea shot me a text so i could add it
 
 - email - [bayoneerhart43@gmail.com](bayoneerhart43@gmail.com)
 
-[Back To The Top](#read-me-template)
+[Back To The Top](#discord-bot)
