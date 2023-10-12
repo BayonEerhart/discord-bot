@@ -15,7 +15,15 @@ def handle_response(message, user_id) -> str:
     p_message = message.lower()
 
     if p_message == '!hello':
-        return 'hey there'
+        rnum=str(random.randint(1,5))
+        hiresponses={
+            "1": "Hello there!"
+            "2": "Sup!"
+            "3": "Hola!"
+            "4": "Hello!"
+            "5": "Nice day, isn't it?"
+        }   
+        return hiresponses[rnum]
 
     if p_message == "!joke":
         return pyjokes.get_joke()
