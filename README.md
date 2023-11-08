@@ -29,6 +29,8 @@ to install do :
 git clone git@github.com:BayonEerhart/discord-bot.git
 cd /path/to/your/project/discord-bot/extra-files
 pip install -r requirements.txt
+cd  && cd bot
+python3 main.py
 ```
 now you have to put **times.json** and **settings.json** into bot
 
