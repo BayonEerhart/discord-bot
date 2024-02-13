@@ -135,7 +135,7 @@ pause==0.3
 pbr==5.8.0
 pexpect==4.8.0
 pickleshare==0.7.5
-Pillow==10.0.0
+Pillow==10.2.0
 platformdirs==3.3.0
 ply==3.11
 polygon==1.1.0
